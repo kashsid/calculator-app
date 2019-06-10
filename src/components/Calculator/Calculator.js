@@ -73,7 +73,7 @@ class App extends Component {
     //set the state of the operator used to whatever value is clicked upon
     handleoperatorChange = number => event => {
         this.state.firstNum = this.state.value
-        this.setState({ value: "" })
+        //this.setState({ value: "" })
         this.state.operator = event.target.value
     }
 
