@@ -1,26 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Calculator from '../Calculator/Calculator';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+//basic set up to call the calculator component and give the page a header
+const App = () => (
+  <div className="App">
+    <header>
+      <h1>Code Challenge Calculator</h1>
+    </header>
+    <Calculator />
+  </div>
+);
 
 export default App;
