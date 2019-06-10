@@ -25,7 +25,7 @@ if (process.env.DATABASE_URL) {
     config = {
         host: 'localhost', // Server hosting the postgres database
         port: 5432, // env var: PGPORT
-        database: 'calc', // change this line if you want to use a different database
+        database: 'calc_app', // change this line if you want to use a different database
         max: 10, // max number of clients in the pool
         idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
     };
@@ -39,7 +39,8 @@ pool.on('connect', () => {
     console.log('Postgesql connected');
 });
 
-
+// the pool with emit an error on behalf of any idle clients
+// it contains if a backend error or network partition happens
 pool.on('error', (err) => {
     console.log('Unexpected error on idle client', err);
     process.exit(-1);

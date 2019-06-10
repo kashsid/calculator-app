@@ -5,7 +5,11 @@
 .calculator {
   width: 300px;
   height: 500px;
-  background-color: black
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  
 }
 
 .row {
@@ -53,13 +57,19 @@
   justify-content: center
 }
 
-.history-header {
+.exp-history {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .history {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 15px;
+  font-size: 18px;
+  align-content: right;
+}
+
+ul li {
+  background: #cce5ff;
+  margin: 5px;
 }

@@ -1,8 +1,6 @@
 const express = require('express');
-
 const app = express();
 const bodyParser = require('body-parser');
-
 const calculatorRouter = require('./routes/calculator.router');
 
 
