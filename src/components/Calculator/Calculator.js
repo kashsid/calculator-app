@@ -8,7 +8,7 @@ class App extends Component {
 
     //as of right now this is my quick fix to constantly be getting all database entries
     componentDidMount = () => {
-        this.interval = setInterval(() => this.props.dispatch({ type: 'GET_CALC' }), 1000);
+        this.interval = setInterval(() => this.props.dispatch({ type: 'GET_CALCULATION' }), 1000);
         // this.props.dispatch({ type: 'GET_CALC' });
     }
 
@@ -39,7 +39,7 @@ class App extends Component {
             this.state.secondNumber !== "" &&
             this.state.symbol !== "") {
             // console.log('DID THIS WORK????', this.state);
-            this.props.dispatch({ type: 'ADD_CALC', payload: this.state })
+            this.props.dispatch({ type: 'ADD_CALCULATION', payload: this.state })
             this.clearFields();
         }
     }
@@ -164,7 +164,7 @@ class App extends Component {
                     <div className="history-header">
                         Entry History  (Ten Most Recent)
    </div>
-                    {this.props.reduxState.calculationsReducer.map((calc) =>
+                    {this.props.reduxState.calculatorReducer.map((calc) =>
                         <div className="history">
                             <li>{calc.firstNumber}   {calc.symbol}   {calc.secondNumber}   =   {calc.value}</li>
                         </div>

@@ -15,7 +15,7 @@ function* addCalc(action) {
 
 //GET
 function* getCalc() {
-  // console.log('GET ten most recent calculations');
+   console.log('GET ten most recent calculations');
   try {
     const getResponse = yield axios.get(`/api/calc/`);
     const action = { type: "SET_CALCULATION", payload: getResponse.data };
