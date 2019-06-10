@@ -80,43 +80,57 @@ export class Calculator extends Component {
 
     render() {
         return (
-            <div className="Calculator">
-               
+            <div>
+                <div className="calculator">
+                    <div className="row-value">
+                        <div>{this.state.value}</div>
+                    </div>
+                    <div id="first-rows">
+                        <button className="btn-style num-bg num " onClick={this.handleChange('value')} value="7">7</button>
+                        <button className="btn-style num-bg num " onClick={this.handleChange('value')} value="8">8</button>
+                        <button className="btn-style num-bg num " onClick={this.handleChange('value')} value="9">9</button>
+                        <button className="btn-style opera-bg operator " onClick={this.handleSymbolChange('symbol')} value="/">/</button>
+                    </div>
+                    <div className="row">
+                        <button className="btn-style num-bg num " onClick={this.handleChange('value')} value="4">4</button>
+                        <button className="btn-style num-bg num " onClick={this.handleChange('value')} value="5">5</button>
+                        <button className="btn-style num-bg num " onClick={this.handleChange('value')} value="6">6</button>
+                        <button className="btn-style opera-bg operator" onClick={this.handleSymbolChange('symbol')} value="*">*</button>
+                    </div>
+                    <div className="row">
+                        <button className="btn-style num-bg num " onClick={this.handleChange('value')} value="1">1</button>
+                        <button className="btn-style num-bg num " onClick={this.handleChange('value')} value="2">2</button>
+                        <button className="btn-style num-bg num " onClick={this.handleChange('value')} value="3">3</button>
+                        <button className="btn-style opera-bg operator" onClick={this.handleSymbolChange('symbol')} value="+">+</button>
+                    </div>
+                    <div className="row">
+                        <button className="btn-style num-bg num " onClick={this.handleDecimalChange('value')} value=".">.</button>
+                        <button className="btn-style num-bg num " onClick={this.handleZeroChange('value')} value="0">0</button>
+                        <button id="eqn-bg" className="eqn operator align" onClick={this.submitEquation}>=</button>
+                        <button className="btn-style opera-bg operator " onClick={this.handleSymbolChange('symbol')} value="-">-</button>
+                    </div>
+                    <div className="row">
+                        <button className="del-bg " onClick={this.empty}>Clear</button>
+                    </div>
+                </div>
                 <div>
-                    <div>
-                        <div>{this.state.input}</div>
-                    </div>
-                    <div>
-                        <button onClick={this.handleChange('value')} value="7">7</button>
-                        <button onClick={this.handleChange('value')} value="8">8</button>
-                        <button onClick={this.handleChange('value')} value="9">9</button>
-                        <button onClick={this.handleOperatorChange('operator')} value="/">/</button>
-                    </div>
-                    <div>
-                        <button onClick={this.handleChange('value')} value="4">4</button>
-                        <button onClick={this.handleChange('value')} value="5">5</button>
-                        <button onClick={this.handleChange('value')} value="6">6</button>
-                        <button onClick={this.handleOperatorChange('operator')} value="*">*</button>
-                    </div>
-                    <div>
-                        <button onClick={this.handleChange('value')} value="1">1</button>
-                        <button onClick={this.handleChange('value')} value="2">2</button>
-                        <button onClick={this.handleChange('value')} value="3">3</button>
-                        <button onClick={this.handleOperatorChange('operator')} value="+">+</button>
-                    </div>
-                    <div>
-                        <button nClick={this.handleDecimalChange('value')} value="3">.</button>
-                        <button onClick={this.handleZeroChange('value')} value="0">0</button>
-                        <button onClick={this.submitEquation}>=</button>
-                        <button onClick={this.handleOperatorChange('operator')} value="-">-</button>
-                    </div>
-                    <div>
-                        <button onClick={this.empty}>Clear</button>
-                    </div>
+                    {/* map over the reducer that holds the ten most recent calculations */}
+                    <div className="history-header">
+                        Entry History  (Ten Most Recent)
+   </div>
+                    {this.props.reduxState.calculationsReducer.map((calc) =>
+                        <div className="history">
+                            <li>{calc.firstNumber}   {calc.symbol}   {calc.secondNumber}   =   {calc.value}</li>
+                        </div>
+                    )}
                 </div>
             </div>
         );
     }
 }
 
-export default Calculator
+const mapReduxStateToProps = (reduxState) => ({
+    reduxState
+});
+
+export default connect(mapReduxStateToProps)(App);
