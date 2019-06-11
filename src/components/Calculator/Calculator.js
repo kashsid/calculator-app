@@ -249,7 +249,7 @@ class App extends Component {
         </div>
         <div>
           <div className="exp-history">
-            <h3>Claculation History</h3>
+            <h3>Calculation History</h3>
           </div>
           {this.props.reduxState.calculatorReducer.map(calc => (
             <div className="history">
