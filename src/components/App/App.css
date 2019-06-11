@@ -1,72 +1,72 @@
 .App {
-    align - content: center;
+    align-content: center;
 }
 
 .calculator {
     width: 300px;
     height: 500px;
-    background - color: black;
-    display: flex;
-    flex - direction: column;
-    margin: auto;
+    background-color:black;
+    display:flex;
+    flex-direction:column;
+    margin:auto;
 
 }
 
 .row {
     display: flex;
-    width: 100 %;
+    width:100%;
 }
 
-.row - value {
+.row-value {
     display: flex;
-    width: 100 %;
-    background - color: black;
+    width: 100%;
+    background-color: black;
     height: 100px;
     flex: 1;
-    font - family: 'Courier New', Courier, monospace;
-    background - color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
     color: white;
-    font - size: 50px;
-    justify - content: flex - end;
-    align - items: center;
+    font-size: 50px;
+    justify-content:flex-end;
+    align-items:center;
 }
 
 .button {
     display: flex;
     height: 70px;
     flex: 1;
-    font - size: 30px;
-    font - family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-family:'Courier New', Courier, monospace;
     margin: 5px;
-    background - color: grey;
+    background-color: grey;
     color: black;
     outline: 1px solid blue;
-    justify - content: center
+    justify-content:center
 }
 
-.symbol - button {
+.symbol-button {
     display: flex;
     height: 70px;
     flex: 1;
-    font - size: 40px;
-    font - family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
     margin: 5px;
-    background - color: darkgrey;
+    background-color:darkgrey;
     color: black;
     outline: 1px solid red;
-    justify - content: center
+    justify-content: center
 }
 
-.exp - history {
-    font - family: 'Courier New', Courier, monospace;
-    font - size: 20px;
-    font - weight: bold;
+.exp-history {
+    font-family:'Courier New', Courier, monospace;
+    font-size:20px;
+    font-weight: bold;
 }
 
 .history {
-    font - family: 'Courier New', Courier, monospace;
-    font - size: 18px;
-    align - content: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    align-content: right;
 }
 
 ul li {
