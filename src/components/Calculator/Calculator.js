@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import "./claculate.css";
 import "./calc.css";
 
-class Calculator extends Component {
+class App extends Component {
   //getting the calculations from database entries
   componentDidMount = () => {
     this.interval = setInterval(
@@ -268,4 +268,4 @@ const mapReduxStateToProps = reduxState => ({
   reduxState
 });
 
-export default connect(mapReduxStateToProps)(Calculator);
+export default connect(mapReduxStateToProps)(App);
