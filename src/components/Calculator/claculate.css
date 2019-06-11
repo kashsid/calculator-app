@@ -97,13 +97,7 @@
   cursor: pointer;
 }
 
-.btn--zero{
-  flex: 2;
-  border-radius: 95px/80px;
-  align-items: end;
-  display: flex;
-  padding-left: 50px;
-}
+
 
 .btn--orange{
   background: #e48800
