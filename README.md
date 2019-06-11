@@ -5,5 +5,23 @@ This is a calculator which logs calculations as they happen and shares those cal
 
 ### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+The calculator is deployed here https://boiling-coast-58271.herokuapp.com/
+
+## Technolgies Used
+
+Axios
+CSS
+Express
+HTML
+Javascript
+Node
+Postico
+Postgres
+Postman
+React
+Redux
+
+
+
+
 
